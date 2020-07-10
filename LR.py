@@ -69,5 +69,9 @@ yhat = LR.predict(X_test)
 yhat
 
 yhat_prob = LR.predict_proba(X_test)
+    #predict_proba returns estimates for all classes, ordered by the label of classes. So, the first column is the probability of class 1, P(Y=1|X), and second column is probability of class 0, P(Y=0|X):
 yhat_prob
+print(yhat_prob)
 
+
+#=========================
