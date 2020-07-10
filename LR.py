@@ -5,9 +5,11 @@ import pandas as pd
 import pylab as pl
 import numpy as np
 import scipy.optimize as opt
-from sklearn import preprocessing
 import matplotlib.pyplot as plt
+from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
 # %matplotlib inline #needed in jupyter notebooks
 
 #==================Loading the data into the project=================================
@@ -50,5 +52,18 @@ X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random
 print ('Train set:', X_train.shape,  y_train.shape)
 print ('Test set:', X_test.shape,  y_test.shape)
 
+
+
+#=================================================MODELLING===========================================
+
+#===================================Logistic Regression with SCIKIT-LEARN===============================
+LR = LogisticRegression(C=0.01, solver='liblinear').fit(X_train,y_train)
+    #other scikit-learn solvers are ‘newton-cg’, ‘lbfgs’, ‘liblinear’, ‘sag’, ‘saga’ solvers
+    #the version of Logistic Regression in Scikit-learn, support regularization. Regularization is a technique used to solve the overfitting problem in machine learning models. C parameter indicates inverse of regularization strength which must be a positive float
+LR
+
+
+
+#============================================PREDICTION=====================================
 
 
