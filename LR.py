@@ -30,8 +30,13 @@ print(data_shape)
 #=======================================Features and Target selection===========================
 X = np.asarray(churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip']])
 X[0:5]
+print(X)
 
 y = np.asarray(churn_df['churn'])
 y [0:5]
+print(y)
 
-#==============================
+#======================================Normalize dataset===============================
+X = preprocessing.StandardScaler().fit(X).transform(X)
+X[0:5]
+print(X)
