@@ -86,7 +86,8 @@ print("Jacccard Similarity Score: ", jaccard_similarity_score)
 
 
 #=========================================Confusion Matrix======================================
-def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Blues):
+def plot_confusion_matrix(cm, classes, normalize = False, title = 'Confusion matrix', cmap = plt.cm.Blues):
+    
     """
     This function prints and plots the confusion matrix.
     Normalization can be applied by setting `normalize=True`.
@@ -137,4 +138,11 @@ print (classification_report(y_test, yhat))
 #===========================================Log Loss========================================
 log_loss = log_loss(y_test, yhat_prob)
 print(log_loss)
+
+
+# #=======================SAMPLE MODEL USING DIFFERENT LOGISTIC REGRESSION PARAMETERS========================
+# LR2 = LogisticRegression(C=0.01, solver='sag').fit(X_train, y_train)
+# yhat_prob2 = LR2.predict_proba(X_test)
+# print ("LogLoss for sample parameter: %.2f" % log_loss(y_test, yhat_prob2))
+
 
