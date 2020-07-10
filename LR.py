@@ -27,5 +27,11 @@ print(data)
 data_shape = churn_df.shape
 print(data_shape)
 
+#=======================================Features and Target selection===========================
+X = np.asarray(churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip']])
+X[0:5]
 
+y = np.asarray(churn_df['churn'])
+y [0:5]
 
+#==============================
