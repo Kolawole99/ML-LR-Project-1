@@ -7,6 +7,7 @@ import numpy as np
 import scipy.optimize as opt
 from sklearn import preprocessing
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 # %matplotlib inline #needed in jupyter notebooks
 
 #==================Loading the data into the project=================================
@@ -40,3 +41,14 @@ print(y)
 X = preprocessing.StandardScaler().fit(X).transform(X)
 X[0:5]
 print(X)
+
+
+
+#==============================================TRAIN/TEST SPLIT========================================
+
+X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.2, random_state=4)
+print ('Train set:', X_train.shape,  y_train.shape)
+print ('Test set:', X_test.shape,  y_test.shape)
+
+
+
