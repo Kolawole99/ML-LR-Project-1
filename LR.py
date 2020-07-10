@@ -65,5 +65,9 @@ LR
 
 
 #============================================PREDICTION=====================================
+yhat = LR.predict(X_test)
+yhat
 
+yhat_prob = LR.predict_proba(X_test)
+yhat_prob
 
