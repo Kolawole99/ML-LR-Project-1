@@ -134,6 +134,7 @@ print (classification_report(y_test, yhat))
     #F1 score reaches its best value at 1 (perfect precision and recall) and worst at 0.
 
 
-
-
+#===========================================Log Loss========================================
+log_loss = log_loss(y_test, yhat_prob)
+print(log_loss)
 
