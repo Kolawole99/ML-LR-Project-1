@@ -13,3 +13,19 @@ import matplotlib.pyplot as plt
 churn_df = pd.read_csv("ChurnData.csv")
 data = churn_df.head()
 print(data)
+
+
+
+#===================================DATA PREPROCESSING AND SELECTION==================================
+
+#============================================Data selection=====================================
+churn_df = churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip', 'callcard', 'wireless','churn']]
+churn_df['churn'] = churn_df['churn'].astype('int')
+data = churn_df.head()
+print(data)
+
+data_shape = churn_df.shape
+print(data_shape)
+
+
+
